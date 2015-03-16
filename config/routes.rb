@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root 'flash_cards#index'
-  resources :flash_cards, only: :index
+  root 'static_pages#index'
+  resources :static_pages, only: :index
 end
