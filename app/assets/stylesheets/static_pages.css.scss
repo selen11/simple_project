@@ -1,6 +1,6 @@
 *{
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0;
 }
 
 #container {
@@ -9,6 +9,7 @@
 
   section {
     clear: both;
+
     p {
       font-size: 22px;
     }
@@ -16,6 +17,15 @@
 
   header {
     margin-bottom: 46px;
+
+    &.clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+      visibility: hidden;
+      line-height: 0;
+      height: 0;
+    }
 
     h1 {
       float: left;
@@ -33,25 +43,10 @@
   }
 }
 
-.navigation-links li {
-  display: inline-block;
-  margin: 0 16px;
-}
+// MISC
 
-/* MISC */
-
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0;
-}
-
-
-html[xmlns].clearfix{
-  display:block;
+html[xmlns].clearfix {
+  display :block;
 }
 
 * html .clearfix{

@@ -6,9 +6,6 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    section#container
-      header.clearfix
-        = yield
-      section
-        p Первый в мире удобный менеджер флеш-карточек. Именно так.
+    = yield
+
 
