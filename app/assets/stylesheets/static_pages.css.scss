@@ -21,13 +21,12 @@
       line-height: 0;
       visibility: hidden;
     }
-
-    h1 {
-      float: left;
-      margin: 0;
-    }
   }
 
+  header h1 {
+    float: left;
+    margin: 0;
+  }
 }
 
 .navigation-links {
@@ -41,7 +40,9 @@
 
 // MISC
 
-* html .clearfix {
-  display: block;
-  height: 1%;
+* html {
+  .clearfix {
+    display: block;
+    height: 1%;
+  }
 }
