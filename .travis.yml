@@ -1,27 +1,27 @@
 language: ruby
 rvm:
-  - 2.1.2
+- 2.1.2
 deploy:
   provider: heroku
   api_key:
-    secure: jcfaUWDMUGokOUF428PH8NHVsCevIls2R9Pwro/a9sbqi8ntwRIdkVfFcZALwqRdwdMaWPyuyEaNpvtcUjdVR+nB45IKiBJmAH3J77bnh8O0UnO197PSxZ/lmNmmcC6A3l3coOScAlirEVvTRFJHrHs4GCh+q5M6KaC78AINY3A=
+    secure: zr8ALIF5AfaKUtjeS1j8EEy7tMhu0h/sf8a/3Z4teCLVVZvo8hide7XJ36MAIgaE0TX0mZYxrNRDQJzjyombVYDGMwRCtqm5QyBWzrAkgVmub+EAp+6ZUX2YpIl37jPPY5ZEP+vaPqBCvd/XulM//WX43yEjY0sfePED0l/OU9c=
   app:
     staging: selen11-staging
     master: selen11-master
   on:
     rvm: 2.1.2
   run:
-    - bundle exec rake db:migrate
-    - restart
+  - bundle exec rake db:migrate
+  - restart
 addons:
   postgresql: '9.3'
 gemfile: Gemfile
 cache:
   bundler: true
 script:
-  - bundle exec rake db:migrate --trace
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec
+- bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec
 before_script:
-  - cp config/database.yml.example config/database.yml
-  - psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.yml.example config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
