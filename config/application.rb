@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 module Simple
   class Application < Rails::Application
     config.generators do |g|
-      g.test_framework :rspec, fixtures: true, views: false
+      g.test_framework false
       g.integration_tool false
       g.fixture_replacement false
       g.template_engine :slim
