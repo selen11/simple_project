@@ -1,0 +1,12 @@
+h1 Cards
+.cards
+  table
+    tr
+      th Original Text
+      th Translated Text
+      th Card
+    - @cards.each do |card|
+      tr
+        td = card.original_text
+        td = card.translated_text
+        td = card.review_date.strftime('%d %B %Y')

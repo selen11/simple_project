@@ -12,6 +12,7 @@ deploy:
     rvm: 2.1.2
   run:
   - bundle exec rake db:migrate
+  - bundle exec rake db:seed
   - restart
 addons:
   postgresql: '9.3'
