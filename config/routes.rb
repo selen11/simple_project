@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  root 'st#home'
-
+  root 'static_pages#home'
 end

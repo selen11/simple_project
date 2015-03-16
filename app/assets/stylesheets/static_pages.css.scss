@@ -1,0 +1,48 @@
+.container {
+  margin: 48px auto;
+  width: 960px;
+
+  section {
+    clear: both;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  header {
+    margin-bottom: 46px;
+
+    &.clearfix:after {
+      clear: both;
+      content: "";
+      display: block;
+      height: 0;
+      line-height: 0;
+      visibility: hidden;
+    }
+
+    h1 {
+      float: left;
+      margin: 0;
+    }
+  }
+}
+
+.navigation-links {
+  float: right;
+
+  li {
+    display: inline-block;
+    margin: 0 16px;
+  }
+}
+
+// MISC
+
+* html {
+  .clearfix {
+    display: block;
+    height: 1%;
+  }
+}
