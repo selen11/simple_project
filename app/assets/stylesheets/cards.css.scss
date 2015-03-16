@@ -1,8 +1,9 @@
-table.cards {
-  border: 1px solid black;
-  text-align: center;
+.cards {
+  table {
+    text-align: center;
 
-  th {
-    width:40%;
+    th {
+      width: 40%;
+    }
   }
 }
