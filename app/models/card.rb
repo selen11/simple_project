@@ -4,7 +4,7 @@ class Card < ActiveRecord::Base
   validate :check_text
   validates :review_date, :original_text, :translated_text, presence: true
   validates :translated_text, :original_text,
-            length: { minimum: 10, maximum: 250 }
+            length: { minimum: 3, maximum: 250 }
 
   private
 
