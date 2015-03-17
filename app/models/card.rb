@@ -1,11 +1,10 @@
 class Card < ActiveRecord::Base
   before_validation :set_review_date
 
-
   validates :review_date, :original_text, :translated_text, presence: true
   validates :translated_text, :original_text,
             length: { minimum: 3, maximum: 250 }
-  validate  :check_text
+  validate :check_text
 
   private
 
@@ -18,8 +17,7 @@ class Card < ActiveRecord::Base
     errors[:translated_text] << 'Перевод не должен совпадать с оригиналом'
   end
 
-
   def get_attr(attrib)
-    self.send(attrib).mb_chars.strip.downcase if self.respond_to?(attrib)
+    send(attrib).mb_chars.strip.downcase if self.respond_to?(attrib)
   end
 end
