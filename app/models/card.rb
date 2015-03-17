@@ -14,7 +14,7 @@ class Card < ActiveRecord::Base
 
   def check_text
     return if get_attr(:translated_text) != get_attr(:original_text)
-    errors[:translated_text] << 'Перевод не должен совпадать с оригиналом'
+    errors[:translated_text] << "Перевод не должен совпадать с оригиналом"
   end
 
   def get_attr(attrib)
