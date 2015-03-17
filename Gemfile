@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'russian'
 
 group :production do
   gem 'rails_12factor'
