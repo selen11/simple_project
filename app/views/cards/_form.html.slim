@@ -1,0 +1,9 @@
+= simple_form_for(@card) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :original_text, label: 'Оригинальный текст'
+    = f.input :translated_text, label: 'Перевод'
+
+  .form-actions
+    = f.button :submit, 'Coхранить'
