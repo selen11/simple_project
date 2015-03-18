@@ -18,6 +18,8 @@ class Card < ActiveRecord::Base
   end
 
   def sanitize_text(text_attribute)
-    send(text_attribute).mb_chars.strip.downcase if self.respond_to?(text_attribute)
+    if self.respond_to?(text_attribute)
+      send(text_attribute).mb_chars.strip.downcase
+    end
   end
 end
