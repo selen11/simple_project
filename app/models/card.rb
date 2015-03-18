@@ -13,11 +13,11 @@ class Card < ActiveRecord::Base
   end
 
   def check_text
-    return if get_attr(:translated_text) != get_attr(:original_text)
+    return if sanitize_text(:translated_text) != sanitize_text(:original_text)
     errors[:translated_text] << "Перевод не должен совпадать с оригиналом"
   end
 
-  def get_attr(attrib)
-    send(attrib).mb_chars.strip.downcase if self.respond_to?(attrib)
+  def sanitize_text(text_attribute)
+    send(text_attribute).mb_chars.strip.downcase if self.respond_to?(text_attribute)
   end
 end
